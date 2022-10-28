@@ -7,10 +7,21 @@
   <script type="module">
   
     const rootElement = document.getElementById('root')
-    const element = React.createElement('div', {className: "container"}, "Hello worldi");
+    // const rootElement = React.createElement('div', {className: "root"});
+    
+    // Extra stuff
+    const child1 = React.createElement('span', {}, "Hello")
+    const child2 = React.createElement('span', {}, "World!!!")
+    
+    const element = React.createElement('div', 
+    {className: "container"}, 
+    child1, ' ', child2);
   
     const root= ReactDOM.createRoot(rootElement)
     root.render(element)
+
+// Alternative: 
+// ReactDOM.render(element, rootElement)
 
   </script>
 </body>
